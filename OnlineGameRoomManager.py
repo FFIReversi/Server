@@ -254,7 +254,7 @@ async def cleanup_player(websocket):
 
 
 async def main():
-    async with websockets.serve(handler, "localhost", 8765):
+    async with websockets.serve(handler, "0.0.0.0", 8765):
         logger.info("WebSocket 伺服器已啟動，在 ws://localhost:8765 上運行")
         await asyncio.Future()  # 運行直到手動停止伺服器
 
